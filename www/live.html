@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>E-Auction</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">  
+<link rel="apple-touch-icon" sizes="180x180" href="images/ath.png">
+<link href="video-js.css" rel="stylesheet">
+
+</head>
+    
+<body class="theme-light" data-highlight="blue2">
+        
+<div id="page">
+    
+
+	<div class="header header-fixed header-logo-app" style='color:white; background-color:#c33e0a'>
+        <a href="#" class="back-button header-title" style='color:white;'><img src='logo.png' style='margin-top:10px; margin-left:-40px;'></a>
+	
+        <a href="#" class="header-icon header-icon-2" data-toggle-theme style='color:white;'><i class="fa fa-moon"></i></a>
+        <a href="#" data-menu="action-options" class="header-icon header-icon-3" style='color:white;'><i class="fa fa-search"></i></a>
+    </div>
+    
+       
+    <div class="page-content header-clear-large">           
+
+        <div class="divider divider-margins bottom-0"></div>
+
+        <div class="content bottom-15" >
+            <div class="gallery-views gallery-view-3">
+                <div class="content-title has-border border-highlight bottom-10">
+                        <h3>JLL Singapore - LOT 1</h3>
+                    <a href="#" class="color-highlight"></a>
+                </div>
+
+                <video-js autoplay id="my_video_1" class="vjs-default-skin" controls preload="auto" width="360" height="250">
+                    <source src="http://d3v2133yrgv5pq.cloudfront.net/eauction.m3u8" type="application/x-mpegURL">
+                </video-js>
+
+                <div class="content">
+                    <div class="content-title ">
+                            <h3>The Centris Jurong Point, Corner Penthouse With Poolview</h3>
+                        <a href="#" class="color-highlight"></a>
+                    </div>
+					
+					  <div class="content-title " style='text-align:right; width:100%'>
+                          Price Now<span id='pricenow' style='font-weight:bold; font-size:20pt;'>$990,000</span>
+							<input type='hidden' id='price' value='990000'>
+                        <a href="#" class="color-highlight"></a>
+                    </div>
+					
+					 <div class="row">
+                    <div class="col-5">
+                        <span style="display:inline-block; margin-top:15px; font-size:13px; float: left;">Enable Bidding:</span>    
+                        <span style="display:inline-block; margin-top:5px; font-size:13px; float: left;">Deposit: $3, 000</span>
+                        <span style="display:inline-block; margin-top:5px; font-size:13px; float: left;">Bidder ID: 20012</span>
+                    </div>
+                    <div class="col-2">
+                        <a href="#" class="toggle-switch toggle-ios toggle-off" 
+                        data-toggle-height="26"
+                        data-toggle-width="50"
+                        data-toggle-content="toggle-content-3"
+                        data-toggle-checkbox="toggle-checkbox-3"
+                        data-bg-on="bg-green1-dark" 
+                        data-bg-off="bg-gray1-dark"
+                        style="margin-top:15px; float:left;">
+                        <strong></strong>
+                        <u></u>
+                        </a>
+                    </div>
+                    <div class="col-5">
+                        <a style="font-size:25px; width:150px; float:right; text-align: center;" 
+						class="button shadow-huge button-s button-round-small bg-red1-dark" id='bidbtn' href="#" onclick='bid()'>Bid</a>
+                    </div> 
+                </div>
+				<script>
+				      function bid()
+					  {
+					  		 var val1 = parseInt(document.getElementById('price').value) + 1000;
+                             // alert(val1);
+							  document.getElementById('price').value = val1;
+							  document.getElementById('pricenow').innerHTML = "$" + val1;
+							  
+							  if(val1 == 1001000)
+							  window.location = 'contract.html'
+					  }
+				
+				</script>
+                    
+                    <div class="link-list link-list-2 link-list-long-border link-list-icon-bg bottom-50">
+                            <a href="#" style="padding-left:0px;">
+                                <span>Type:</span>
+                              <span style="margin-left:200px">  <strong>Condominium For Sale</strong> </span>
+                            </a>
+                            <a href="#" style="padding-left:0px;">
+                                <span>Floor Size:</span>
+                                <strong>1216 sqft</strong>
+                            </a>
+                            <a href="#" style="padding-left:0px;">
+                                    <span>Land Size:</span>
+                                    <strong>N/A</strong>
+                            </a>
+                            <a href="#" style="padding-left:0px;">
+                                <span>Furnishing:</span>
+                                <strong>Partially Furnished</strong>
+                            </a> 
+                        </div> 
+                </div>        
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+
+
+    <div class="menu-hider"></div>
+</div>
+
+<script src="video.js"></script>
+  <script src="videojs-http-streaming.js"></script>
+  
+  <script>
+    var player = videojs('my_video_1');
+	player.play();
+  </script>
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js" async></script>
+</body>
